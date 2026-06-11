@@ -60,6 +60,13 @@ section .sec-child2{
     display: flex;
     flex-direction: column;
     gap: 10px;
+    background-color: red;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+section .sec-child2::-webkit-scrollbar{
+    display: none; 
 }
 .note{
     width: 100%;
