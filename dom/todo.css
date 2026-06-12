@@ -60,7 +60,6 @@ section .sec-child2{
     display: flex;
     flex-direction: column;
     gap: 10px;
-    background-color: red;
     flex-wrap: nowrap;
     overflow-x: auto;
     scrollbar-width: none;
@@ -119,4 +118,98 @@ h1{
 .second{
     display: flex;
     gap: 10px;
+}
+
+
+/* =======================
+        TABLET
+======================= */
+@media (max-width:1024px){
+
+    section{
+        width: 80%;
+        height: 85%;
+    }
+
+    input{
+        width: 65%;
+        font-size: 18px;
+    }
+
+    button{
+        font-size: 18px;
+    }
+
+    h1{
+        font-size: 16px;
+    }
+
+    .edit,
+    .delete{
+        width: 70px;
+        font-size: 16px;
+    }
+
+    .first{
+        width: 60%;
+    }
+}
+
+
+/* =======================
+        MOBILE
+======================= */
+@media (max-width:767px){
+
+    section{
+        width: 95%;
+        height: 90%;
+    }
+
+    .sec-child1{
+        flex-direction: column;
+        height: auto;
+        padding: 15px 10px;
+    }
+
+    input{
+        width: 100%;
+        font-size: 16px;
+    }
+
+    .sec-child1 button{
+        width: 100%;
+        font-size: 16px;
+    }
+
+    section .sec-child2{
+        height: calc(100% - 110px);
+    }
+
+    .note{
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .first{
+        width: 100%;
+    }
+
+    h1{
+        font-size: 15px;
+        word-break: break-word;
+    }
+
+    .second{
+        width: 100%;
+        justify-content: flex-end;
+    }
+
+    .edit,
+    .delete{
+        width: 70px;
+        font-size: 14px;
+        padding: 8px;
+    }
 }
