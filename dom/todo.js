@@ -9,6 +9,7 @@ button.addEventListener('click',()=>{
     note.classList.add('note')
 
     let first=document.createElement('div')
+    first.classList.add('first')
 
     let h1=document.createElement('h1')
     h1.textContent=input.value
