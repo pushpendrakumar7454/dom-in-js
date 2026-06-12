@@ -40,6 +40,5 @@ button.addEventListener('click',()=>{
     note.appendChild(first)
     note.appendChild(second)
     secchild2.appendChild(note)
-
     input.value=""
 })
