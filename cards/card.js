@@ -11,6 +11,7 @@ let submit=document.querySelector('.create')
 
 form.addEventListener('submit', (e) => {
     e.preventDefault();
+    if(img.value.trim()==="" || work.value.trim()==="" || name.value.trim()==="" || detail.value.trim==="" || btntext.value.trim()===""){return;}
        section.innerHTML+=`<div class="card">
             <div class="img-div">
                 <img src="${img.value}" alt="">
@@ -29,7 +30,7 @@ form.addEventListener('submit', (e) => {
         </div>`
         form.reset()
     });
-    
+
 function createUser(){
   let users = [
   {
@@ -92,6 +93,7 @@ function createUser(){
 ];
 
 users.forEach((user,idx)=>{
+  
     section.innerHTML += `
         <div class="card">
             <div class="img-div">
