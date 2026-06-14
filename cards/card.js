@@ -111,7 +111,6 @@ users.forEach((user,idx)=>{
         </div>
     `
 })
-
 }
 section.addEventListener('click', (e) => {
     if (e.target.classList.contains('arrow')) {
