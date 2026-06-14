@@ -29,8 +29,6 @@ if(backbtn){
         window.location.href='./todo.html'
     })
 }
-
-
 if(button){
     button.addEventListener('click',()=>{
 

@@ -208,11 +208,8 @@ h1{
     height: 74%;
     background-color: aqua;
 }
-
-
 /* tablet */
-@media (max-width:1024px){
-
+@media (max-width:1024px){  
     section{
         width: 80%;
         height: 85%;
