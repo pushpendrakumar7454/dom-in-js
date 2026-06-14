@@ -11,7 +11,6 @@ let submit=document.querySelector('.create')
 
 form.addEventListener('submit', (e) => {
     e.preventDefault();
-  
        section.innerHTML+=`<div class="card">
             <div class="img-div">
                 <img src="${img.value}" alt="">
@@ -30,6 +29,7 @@ form.addEventListener('submit', (e) => {
         </div>`
         form.reset()
     });
+    
 function createUser(){
   let users = [
   {
