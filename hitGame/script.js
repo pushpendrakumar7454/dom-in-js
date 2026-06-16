@@ -53,7 +53,7 @@ let startGame=()=>{
     count++
     time++
     timer.textContent=time
-    if(count===20){
+    if(count===30){
         clearInterval(interval)
        let storedHighScore = Number(localStorage.getItem("highScore")) || 0;
             if(sco > storedHighScore){
@@ -65,7 +65,6 @@ let startGame=()=>{
         gameOver.style.display='flex'
         child.removeEventListener('click',increageScore)
     }
-
    },1000)
 }
 
