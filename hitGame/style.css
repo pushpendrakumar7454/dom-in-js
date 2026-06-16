@@ -132,13 +132,13 @@ button:active{
     }
 
     .child {
-        width: 19%;
-        height: 13%;
+        width: 16%;
+        height: 10.4%;
     }
 
     button {
         font-size: 1.6rem;
-        padding: 0.5rem 1rem;
+        padding: 0.6rem 2.1rem;
     }
 
     .gameover {
