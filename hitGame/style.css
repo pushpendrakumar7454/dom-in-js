@@ -107,6 +107,7 @@ button:active{
         font-size: 1.7rem;
         padding: 0.5rem 1rem;
     }
+
     .scores{
     display: flex;
     justify-content: space-between;
@@ -114,8 +115,6 @@ button:active{
     align-items: center;
 }
 }
-
-
 
 /* mobile */
 @media (max-width: 480px) {

@@ -66,7 +66,7 @@ let startGame=()=>{
         child.removeEventListener('click',increageScore)
     }
 
-   },2000)
+   },1000)
 }
 
 
