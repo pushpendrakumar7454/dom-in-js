@@ -132,12 +132,12 @@ button:active{
     }
 
     .child {
-        width: 15%;
+        width: 19%;
         height: 13%;
     }
 
     button {
-        font-size: 1.3rem;
+        font-size: 1.6rem;
         padding: 0.5rem 1rem;
     }
 
@@ -153,5 +153,13 @@ button:active{
 .score{
     font-size: 0.6rem;
     color: white;
+}
+
+.parent{
+    width: 97%;
+    height: 82%;
+    border: 2px solid #ccc;
+    border-radius: 1rem;
+    position: relative;
 }
 }
