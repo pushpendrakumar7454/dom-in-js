@@ -241,7 +241,7 @@ button:nth-child(1){
 }
 
 
-
+/* mobile */
 @media (max-width: 768px) {
 
     main {
@@ -271,7 +271,6 @@ button:nth-child(1){
         font-size: 0.85rem;
     }
 
-    /* ===== TASK STATS (TOTAL / COMPLETED / PENDING) ===== */
     .divbottom {
         width: 100%;
         flex-direction: row;
@@ -290,7 +289,7 @@ button:nth-child(1){
         font-size: 1.4rem;
     }
 
-    /* ===== INPUT + BUTTON STACK ===== */
+
     .taskadd {
         width: 100%;
         padding: 1rem;
@@ -354,7 +353,7 @@ button:nth-child(1){
 
 
 
-/* ================= TABLET ================= */
+/*TABLET  */
 
 @media (min-width: 600px) and (max-width: 1024px){
 
@@ -374,7 +373,6 @@ button:nth-child(1){
         padding:2rem;
     }
 
-    /* Top Stats */
 
     .divbottom{
         width:100%;
@@ -402,7 +400,7 @@ button:nth-child(1){
         margin-top:.5rem;
     }
 
-    /* Input Section */
+
 
     .all{
         padding:0 1rem;
@@ -416,13 +414,12 @@ button:nth-child(1){
         width:82%;
     }
 
-    /* Heading */
+
 
     .pipe{
         text-align:center;
     }
 
-    /* Tasks Section */
 
     .bottommain{
         width:100%;
