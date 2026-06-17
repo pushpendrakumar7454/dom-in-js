@@ -30,9 +30,7 @@ let taskCreate=()=>{
             </div>
         </div>
     `
-
 })
-
 }
 form.addEventListener('submit',(e)=>{
     e.preventDefault()

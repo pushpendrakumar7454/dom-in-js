@@ -328,7 +328,6 @@ button:nth-child(1){
         font-size:1rem;
     }
 
-    /* Heading */
     .pipe{
         padding:1rem;
         text-align:center;
@@ -339,7 +338,6 @@ button:nth-child(1){
         font-size:1rem;
     }
 
-    /* Tasks */
     .bottommain{
         width:100%;
         height:auto;
