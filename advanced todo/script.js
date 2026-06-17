@@ -36,6 +36,7 @@ form.addEventListener('submit',(e)=>{
     e.preventDefault()
     let randomId=Math.floor(Math.random()*100)+1
      let value=input.value
+     if(value==null || value.trim()==="") return
     tasks.push({
     id: randomId,
     value,
