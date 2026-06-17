@@ -106,7 +106,6 @@ button:active{
     padding: 0.7rem 1rem;
 }
 }
-
 /* Mobile */
 @media (max-width: 480px){
     .parent{
@@ -116,7 +115,6 @@ button:active{
         flex-direction: column;
         gap: 0;
     }
-
     button{
         width: 4.2rem;
         height: 57px;
