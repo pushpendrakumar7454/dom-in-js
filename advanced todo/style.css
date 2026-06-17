@@ -241,116 +241,155 @@ button:nth-child(1){
 }
 
 
-/* mobile */
-@media (max-width: 768px) {
+/* Mobile */
+@media (max-width:768px){
 
-    main {
-        padding: 12px;
+    main{
+        padding:12px;
     }
 
-    .section {
-        width: 100%;
-        height: auto;
-        border-radius: 18px;
+    .section{
+        width:100%;
+        height:auto;
+        border-radius:18px;
     }
 
- 
-    .upper {
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: flex-start;
-        padding: 1.2rem;
-        gap: 1.5rem;
+    .upper{
+        flex-direction:column;
+        align-items:flex-start;
+        padding:1.2rem;
+        gap:1.5rem;
     }
 
-    .pro {
-        font-size: 1.8rem;
+    .pro{
+        font-size:1.8rem;
     }
 
-    .manage {
-        font-size: 0.85rem;
+    .manage{
+        font-size:0.85rem;
     }
 
-    .divbottom {
-        width: 100%;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        gap: 0.8rem;
+    .ttt{
+        width:100%;
+        text-align:center;
     }
 
-    .totaltask {
-        flex: 1 1 30%;
-        min-width: 30%;
-        padding: 1rem;
+    /* Stats Cards */
+    .divbottom{
+        width:100%;
+        display:flex;
+        flex-wrap:wrap;
+        gap:1rem;
     }
 
-    .center {
-        font-size: 1.4rem;
+    .totaltask{
+        width:calc(50% - 0.5rem);
+        flex:none;
+        min-width:auto;
+        padding:1rem;
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+        align-items:center;
+        text-align:center;
     }
 
-
-    .taskadd {
-        width: 100%;
-        padding: 1rem;
+    .totaltask:last-child{
+        width:100%;
     }
 
-    form {
-        flex-direction: column;
-        gap: 1rem;
+    .center{
+        font-size:1.8rem;
     }
 
-    .taskadd input {
-        width: 100%;
-        font-size: 1rem;
+    .totaltask h3{
+        font-size:1rem;
     }
 
-    .taskadd button {
-        width: 100%;
-        font-size: 1rem;
-    }
-
- 
-    .pipe {
-        padding: 1rem;
-        text-align: center;
-    }
-
-    .pipe h2 {
-        font-size: 1rem;
-        width: 100%;
-    }
-
-
-     .bottommain{
+    /* Add Task */
+    .taskadd{
         width:100%;
         padding:1rem;
+    }
+
+    form{
+        display:flex;
+        flex-direction:column;
+        gap:1rem;
+    }
+
+    .taskadd input{
+        width:100%;
+        font-size:1rem;
+    }
+
+    .taskadd button{
+        width:100%;
+        font-size:1rem;
+    }
+
+    /* Heading */
+    .pipe{
+        padding:1rem;
+        text-align:center;
+    }
+
+    .pipe h2{
+        width:100%;
+        font-size:1rem;
+    }
+
+    /* Tasks */
+    .bottommain{
+        width:100%;
         height:auto;
+        padding:1rem;
     }
 
     .parenttask{
+        width:100%;
         display:flex;
         flex-direction:column;
-        width:100%;
         gap:1rem;
     }
 
     .taskcom{
         width:100% !important;
-        min-width:100%;
         max-width:100%;
-    }
-    .all{
-        padding: 0.6rem;
+        min-width:100%;
     }
 
-    .task-btn button {
-        font-size: 1rem;
-        padding: 0.6rem;
+    .all{
+        padding:0.6rem;
+    }
+
+    .task{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:0.5rem;
+    }
+
+    .task h2{
+        font-size:1.1rem;
+    }
+
+    .task h3{
+        font-size:1rem;
+    }
+
+    .task-btn{
+        display:flex;
+        flex-wrap:wrap;
+        gap:0.5rem;
+    }
+
+    .task-btn button{
+        flex:1;
+        min-width:90px;
+        padding:0.6rem;
+        font-size:0.9rem;
     }
 }
-
-
 
 
 /*TABLET  */
