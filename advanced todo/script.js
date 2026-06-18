@@ -107,6 +107,7 @@ let allPendingTask=()=>{
     saveTasks();
 }
 
+taskCreate()
 
 const logContainer =
 document.getElementById("logContainer");
