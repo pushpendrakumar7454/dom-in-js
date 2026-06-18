@@ -22,9 +22,9 @@ let taskCreate=()=>{
                 <h3 class="${elem.completed?"completed":''}">${elem.value}</h3>
             </div>
             <div class="task-btn">
-                <button onclick="completeTask(${idx})">Complete</button>
-                <button  onclick="editTask(${idx})">Edit</button>
-                <button class="dltbtn" onclick="deleteBtn(${idx})">
+                <button onclick="completeTask(${idx})" class="clickbtnli">Complete</button>
+                <button  onclick="editTask(${idx})" class="clickbtnl"i>Edit</button>
+                <button class="dltbtn" onclick="deleteBtn(${idx})" class="clickbtnli">
                     Delete
                 </button>
             </div>
@@ -141,5 +141,28 @@ document
 logContainer.innerHTML="";
 });
 
+
+
+let themeBtn = document.getElementById("themeToggle");
+
+
+if(localStorage.getItem("theme") === "light"){
+    document.body.classList.add("light");
+    themeBtn.textContent = "☀️ Light";
+}
+
+themeBtn.addEventListener("click",()=>{
+
+    document.body.classList.toggle("light");
+
+    if(document.body.classList.contains("light")){
+        localStorage.setItem("theme","light");
+        themeBtn.textContent = "☀️ Light";
+    }else{
+        localStorage.setItem("theme","dark");
+        themeBtn.textContent = "🌙 Dark";
+    }
+
+});
 
 
