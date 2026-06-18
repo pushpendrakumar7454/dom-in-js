@@ -8,6 +8,9 @@ let overlay1=document.querySelector('.overlay1')
 let restart=document.querySelector('.restart')
 let overlay2=document.querySelector('.overlay2')
 
+
+
+
 let rn=0
 let value=JSON.parse(localStorage.getItem('scores')) || 0;
 highscore.textContent = value;
@@ -22,13 +25,13 @@ const makeBubbl=()=>{
     let bubbleCount;
 
     if(window.innerWidth <= 480){
-        bubbleCount = 40;
+        bubbleCount = 48; // Mobile
     }
     else if(window.innerWidth <= 768){
-        bubbleCount = 65;
+        bubbleCount = 65; // Tablet
     }
     else{
-        bubbleCount = 85;
+        bubbleCount = 85; // Laptop/Desktop
     }
     for(let i=0;i<bubbleCount;i++){
         let rn=Math.floor(Math.random()*10)+1
