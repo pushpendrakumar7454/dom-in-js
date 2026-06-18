@@ -60,7 +60,7 @@ let timerval=()=>{
 let scores=0
 
 const newScore=()=>{
-    scores+=10
+    scores+=1
     score.textContent=scores
     if(scores>value){
         value=scores
