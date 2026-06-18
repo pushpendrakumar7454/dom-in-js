@@ -25,7 +25,7 @@ const makeBubbl=()=>{
     let bubbleCount;
 
     if(window.innerWidth <= 480){
-        bubbleCount = 48; // Mobile
+        bubbleCount = 54; // Mobile
     }
     else if(window.innerWidth <= 768){
         bubbleCount = 65; // Tablet
