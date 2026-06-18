@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>Advanced Todo App</title>
 </head>
 <body>
 <main>
@@ -48,6 +48,145 @@
        <div class="parenttask"> 
     </div>
        </div>
+            <section class="hero">
+                <h1>Event Propagation Demonstration</h1>
+                <p>Learn Event Bubbling & Capturing visually</p>
+            </section>
+
+            <section class="container">
+
+                <div class="btn-box">
+                    <button id="bubbleBtn">SHOW BUBBLING</button>
+                    <button id="captureBtn">SHOW CAPTURING</button>
+                    <button id="clearBtn">CLEAR LOGS</button>
+                </div>
+
+                <div class="dom-structure eventbub">
+            <pre >
+            Grandparent
+            └── Parent
+                └── Child Button
+            </pre>
+                </div>
+
+                <div class="grandparent">
+                    Grandparent
+
+                    <div class="parent">
+                        Parent
+
+                        <button class="child-btn">
+                            CLICK ME!
+                        </button>
+
+                    </div>
+                </div>
+
+                <div class="logs">
+                    <h2>Execution Log</h2>
+                    <div id="logContainer"></div>
+                </div>
+
+            </section>
+
+            <section class="info-section">
+
+                <div class="card">
+                    <h3 class="eventbub">📘 Event Bubbling</h3>
+                    <p>
+                        Child → Parent → Grandparent
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3 class="eventbub">📗 Event Capturing</h3>
+                    <p>
+                        Grandparent → Parent → Child
+                    </p>
+                </div>
+
+            </section>
+
+            <section class="pipeline">
+
+            <h1 class="pipoo">🌎 Browser Rendering Pipeline</h1>
+
+            <div class="flow">
+
+            <div class="step">1. HTML</div>
+            <div class="arrow">↓</div>
+
+            <div class="step">2. Parsing</div>
+            <div class="arrow">↓</div>
+
+            <div class="step">3. Tokenization</div>
+            <div class="arrow">↓</div>
+
+            <div class="step">4. DOM Tree</div>
+            <div class="arrow">↓</div>
+
+            <div class="step">5. CSSOM Tree</div>
+            <div class="arrow">↓</div>
+
+            <div class="step">6. Render Tree</div>
+            <div class="arrow">↓</div>
+
+            <div class="step">7. Layout</div>
+            <div class="arrow">↓</div>
+
+            <div class="step">8. Paint</div>
+            <div class="arrow">↓</div>
+
+            <div class="step">9. Composite</div>
+
+            </div>
+
+            </section>
+
+            <section class="cards-grid">
+
+            <div class="feature">
+            <h3>HTML Parsing</h3>
+            <p>Converts HTML into DOM structure.</p>
+            </div>
+
+            <div class="feature">
+            <h3>Tokenization</h3>
+            <p>Breaks content into meaningful tokens.</p>
+            </div>
+
+            <div class="feature">
+            <h3>DOM Tree</h3>
+            <p>Creates hierarchy of nodes.</p>
+            </div>
+
+            <div class="feature">
+            <h3>CSSOM</h3>
+            <p>Generates CSS object model.</p>
+            </div>
+
+            <div class="feature">
+            <h3>Render Tree</h3>
+            <p>Combines DOM + CSSOM.</p>
+            </div>
+
+            <div class="feature">
+            <h3>Layout</h3>
+            <p>Calculates dimensions.</p>
+            </div>
+
+            <div class="feature">
+            <h3>Paint</h3>
+            <p>Draws pixels.</p>
+            </div>
+
+            <div class="feature">
+            <h3>Composite</h3>
+            <p>Final rendering on screen.</p>
+            </div>
+
+            </section>
+
     </section>
 </main>
 <script src="script.js"></script>    
