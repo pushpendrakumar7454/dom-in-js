@@ -15,7 +15,7 @@ let gameSpeed = 300;
 if(window.innerWidth <= 768){
     blockWidth = 30;
     blockHeight = 30;
-    gameSpeed = 150;
+    gameSpeed = 240;
 }
 else if(window.innerWidth <= 1024){
     blockWidth = 35;
