@@ -1,0 +1,156 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+html,body{
+    width:100%;
+}
+
+header{
+    width:100%;
+    height:80px;
+    padding:0 5%;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    background:#fff;
+    box-shadow:0 2px 10px rgba(0,0,0,0.1);
+}
+
+.logo p{
+    font-size:1.8rem;
+    font-weight:700;
+    cursor:pointer;
+}
+
+.menuvar{
+    display:flex;
+    align-items:center;
+    gap:2rem;
+}
+
+.menuvar a{
+    text-decoration:none;
+    color:#333;
+    font-size:1rem;
+    font-weight:500;
+    transition:.3s;
+}
+
+.menuvar a:hover{
+    color:#0077ff;
+}
+
+.right-section{
+    display:flex;
+    align-items:center;
+    gap:1.5rem;
+    position: relative;
+}
+
+.profile{
+    font-size:1rem;
+    font-weight:500;
+    cursor:pointer;
+}
+
+.icon{
+    font-size:1.8rem;
+    cursor:pointer;
+    display:none;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+.pmenu{
+    display: none;
+}
+.head{
+    width:100%;
+    height:600px;
+    overflow:hidden;
+    position:relative;
+}
+
+.img_div{
+    width:100%;
+    height:100%;
+    display:flex;
+    transition:transform 0.5s ease;
+}
+
+.img_div img{
+    width:100%;
+    height:100%;
+    flex-shrink:0;
+    object-fit:cover;
+}
+.maniicon{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: blue;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    padding: 20px;
+}
+.sliders{
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    color: black;
+    border-radius: 100%;
+    font-size: 26px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+/* Mobile */
+@media (max-width:768px){
+
+    header{
+        padding:0 20px;
+    }
+
+    .menuvar{
+        display:none;
+    }
+
+    .profile{
+        display:none;
+    }
+
+    .icon{
+        display:block;
+        cursor: pointer;
+    }
+
+    .logo p{
+        font-size:1.5rem;
+    }
+    .pmenu{
+    width: 25%;
+    padding: 20px;
+    gap: 9px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-size: 22px;
+    position: absolute;
+    right: 5px;
+    background:#fff;
+    box-shadow:0 2px 10px rgba(0,0,0,0.1);
+    top: 65px;
+    display: none;
+}
+
+}
