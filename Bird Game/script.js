@@ -25,16 +25,13 @@ let birdMove = setInterval(() => {
 
 
 window.addEventListener("keydown", (e) => {
-
     if (gameOver) return;
 
     if (e.code === "Space") {
         birdTop -= 60;
-
         if (birdTop < 0) {
             birdTop = 0;
         }
-
         bird.style.top = birdTop + "px";
     }
 
@@ -43,7 +40,6 @@ window.addEventListener("keydown", (e) => {
 
 
 function renderPipe() {
-
     if(gameOver) return;
 
     let pipeTop = document.createElement("div");
@@ -52,7 +48,7 @@ function renderPipe() {
     pipeTop.classList.add("pipe");
     pipeBottom.classList.add("pipe");
 
-    let gap = 150;
+    let gap = 155;
 
     let gameHeight = section.clientHeight;
 
