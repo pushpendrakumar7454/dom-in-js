@@ -88,8 +88,6 @@ function renderPipe() {
         pipeTop.style.left = pipeLeft + "px";
         pipeBottom.style.left = pipeLeft + "px";
 
-
-        // Collision
         let birdRect = bird.getBoundingClientRect();
         let topRect = pipeTop.getBoundingClientRect();
         let bottomRect = pipeBottom.getBoundingClientRect();
@@ -122,7 +120,6 @@ setInterval(() => {
 
 
 function isCollide(a, b) {
-
     return !(
         a.right < b.left ||
         a.left > b.right ||
@@ -136,11 +133,8 @@ function isCollide(a, b) {
 
 
 function endGame(){
-
     gameOver = true;
-
     alert("Game Over");
-
     location.reload();
 
 }
