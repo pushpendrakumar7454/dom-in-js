@@ -49,9 +49,7 @@ function renderPipe() {
     pipeBottom.classList.add("pipe");
 
     let gap = 155;
-
     let gameHeight = section.clientHeight;
-
     let topHeight = Math.random() * 250 + 50;
 
     let bottomHeight = gameHeight - topHeight - gap;
