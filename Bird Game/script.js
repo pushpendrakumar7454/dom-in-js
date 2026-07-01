@@ -1,66 +1,146 @@
- const section=document.querySelector('section')
-const bird=document.querySelector('.bird')
+ const section = document.querySelector("section");
+const bird = document.querySelector(".bird");
+
+let birdTop = 200;
+let gravity = 2;
+let gameOver = false;
+
+// Bird Gravity
+let birdMove = setInterval(() => {
+
+    if(gameOver) return;
+
+    birdTop += gravity;
+    bird.style.top = birdTop + "px";
+
+    // Top & Bottom Collision
+    if (
+        birdTop <= 0 ||
+        birdTop + bird.clientHeight >= section.clientHeight
+    ) {
+        endGame();
+    }
+
+}, 20);
 
 
-let birdTop=200
-let gravity=2
+// Jump
+window.addEventListener("keydown", (e) => {
 
-setInterval(()=>{
-    birdTop+=gravity
-    bird.style.top=birdTop+'px'
-},20)
+    if (gameOver) return;
 
-window.addEventListener('keydown',(e)=>{
-   if(e.key==" "){
-    birdTop=birdTop-60
-   }
-    
-})
+    if (e.code === "Space") {
+        birdTop -= 60;
+
+        if (birdTop < 0) {
+            birdTop = 0;
+        }
+
+        bird.style.top = birdTop + "px";
+    }
+
+});
 
 
 
 function renderPipe() {
-    let pipeTop = document.createElement('div');
-    let pipeBottom = document.createElement('div');
 
-    pipeTop.classList.add('pipe')
-    pipeBottom.classList.add('pipe')
-     
-    let gap=100
+    if(gameOver) return;
+
+    let pipeTop = document.createElement("div");
+    let pipeBottom = document.createElement("div");
+
+    pipeTop.classList.add("pipe");
+    pipeBottom.classList.add("pipe");
+
+    let gap = 150;
+
+    let gameHeight = section.clientHeight;
+
+    let topHeight = Math.random() * 250 + 50;
+
+    let bottomHeight = gameHeight - topHeight - gap;
+
+    pipeTop.style.height = topHeight + "px";
+    pipeBottom.style.height = bottomHeight + "px";
+
     pipeTop.style.top = "0px";
     pipeBottom.style.bottom = "0px";
-    
-    let gameHeight=section.clientHeight
-    let maxHeight=gameHeight-gap-60
 
-    let topHeight=Math.random()*maxHeight+50
-    let bottomHeight=maxHeight-topHeight-gap
+    section.append(pipeTop, pipeBottom);
 
-    pipeTop.style.height=topHeight+"px"
-    pipeBottom.style.height=bottomHeight+'px'
+    let pipeLeft = section.clientWidth;
 
-    section.append(pipeTop,pipeBottom)
-
-    let pipeLeft=section.clientWidth
-
-    pipeTop.style.left=pipeLeft+"px"
-    pipeBottom.style.left=pipeLeft+'px'
-
-    let move = setInterval(() => {
-    pipeLeft -= 2;   
     pipeTop.style.left = pipeLeft + "px";
     pipeBottom.style.left = pipeLeft + "px";
-    if(pipeLeft < -60){
-        clearInterval(move);
-        pipeTop.remove();
-        pipeBottom.remove();
-    }
 
-},20);
-    
+
+
+    let move = setInterval(() => {
+
+        if(gameOver){
+            clearInterval(move);
+            return;
+        }
+
+        pipeLeft -= 2;
+
+        pipeTop.style.left = pipeLeft + "px";
+        pipeBottom.style.left = pipeLeft + "px";
+
+
+        // Collision
+        let birdRect = bird.getBoundingClientRect();
+        let topRect = pipeTop.getBoundingClientRect();
+        let bottomRect = pipeBottom.getBoundingClientRect();
+
+        if (
+            isCollide(birdRect, topRect) ||
+            isCollide(birdRect, bottomRect)
+        ) {
+            endGame();
+        }
+
+
+        if (pipeLeft < -60) {
+            clearInterval(move);
+            pipeTop.remove();
+            pipeBottom.remove();
+        }
+
+    }, 20);
+
 }
 
 
-setInterval(()=>{
-    renderPipe()
-},2000) 
+setInterval(() => {
+    renderPipe();
+}, 2000);
+
+
+
+
+
+function isCollide(a, b) {
+
+    return !(
+        a.right < b.left ||
+        a.left > b.right ||
+        a.bottom < b.top ||
+        a.top > b.bottom
+    );
+
+}
+
+
+
+
+function endGame(){
+
+    gameOver = true;
+
+    alert("Game Over");
+
+    location.reload();
+
+}
