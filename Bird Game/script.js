@@ -5,7 +5,6 @@ let birdTop = 200;
 let gravity = 2;
 let gameOver = false;
 
-// Bird Gravity
 let birdMove = setInterval(() => {
 
     if(gameOver) return;
@@ -24,7 +23,7 @@ let birdMove = setInterval(() => {
 }, 20);
 
 
-// Jump
+
 window.addEventListener("keydown", (e) => {
 
     if (gameOver) return;
@@ -68,7 +67,6 @@ function renderPipe() {
     pipeBottom.style.bottom = "0px";
 
     section.append(pipeTop, pipeBottom);
-
     let pipeLeft = section.clientWidth;
 
     pipeTop.style.left = pipeLeft + "px";
@@ -115,10 +113,6 @@ setInterval(() => {
     renderPipe();
 }, 2000);
 
-
-
-
-
 function isCollide(a, b) {
     return !(
         a.right < b.left ||
@@ -128,9 +122,6 @@ function isCollide(a, b) {
     );
 
 }
-
-
-
 
 function endGame(){
     gameOver = true;
