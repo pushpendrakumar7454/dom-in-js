@@ -82,12 +82,12 @@ function updateDashboard() {
     weatherIcon.innerHTML = "☀️";
     weatherText.innerHTML = "Morning";
   } else if (hour >= 12 && hour < 17) {
-    bgImage.src = "./fonts/morning2.png";
+    bgImage.src = "./fonts/sunset.webp";
     greeting.innerHTML = "☀️ Good Afternoon";
     weatherIcon.innerHTML = "🌤";
     weatherText.innerHTML = "Afternoon";
   } else if (hour >= 17 && hour < 20) {
-    bgImage.src = "./fonts/ngh1.png";
+    bgImage.src = "./fonts/chand.gif";
     greeting.innerHTML = "🌇 Good Evening";
     weatherIcon.innerHTML = "🌇";
     weatherText.innerHTML = "Evening";
@@ -432,16 +432,23 @@ function saveTask() {
 function addTask() {
   parenttask.innerHTML = "";
   tasks.forEach((elem, idx) => {
-    parenttask.innerHTML += ` <div class="taskcom">
+    parenttask.innerHTML += ` <div class="taskcom" id="cardTask">
             <div class="task">
                 <h2>${elem.id}</h2>
-                <h3 class="${elem.completed ? "completed" : ""}">${elem.value}</h3>
-                <h3 class="${elem.completed ? "completed" : ""}">${elem.textareaValue}</h3>
+                <h3 class="${elem.completed ? "completed" : ""} ${elem.important ? "important" : ""}">${elem.value}</h3>
+                <h3 class="${elem.completed ? "completed" : ""} ${elem.important ? "important" : ""}">
+                    ${elem.textareaValue}
+                </h3>
             </div>
-            <div class="task-btn">
-                <button  class="clickbtnli" onclick="completeTask(${idx})" >Complete</button>
-                <button class="clickbtnli" onclick="editTask(${idx})">Edit</button>
-                <button class="clickbtnli" onclick="deleteTask(${idx})"> Delete</button>
+            <div class="task-btn buttntop">
+                <div class="twobtn">
+                <button  class="clickbtnli"  id="allbtnclick1" onclick="completeTask(${idx})" >Complete</button>
+                <button class="clickbtnli" id="allbtnclick2" onclick="editTask(${idx})">Edit</button>
+                </div>
+               <div class="twobtn">
+                <button class="clickbtnli" id="allbtnclick3" onclick="deleteTask(${idx})"> Delete</button>
+               <button class="clickbtnli" id="allbtnclick4" onclick="markTask(${idx})">${elem.important ? "Unmark" :"Mark"}</button>
+               </div>
             </div>
         </div>
     `;
@@ -461,6 +468,7 @@ todoForm.addEventListener("submit", (e) => {
     textareaValue,
     id,
     completed: false,
+      important: false,
   });
   console.log(textareaValue);
   addTask();
@@ -521,6 +529,16 @@ function pendingTaskAll() {
   addTask();
   saveTask();
 }
+
+function markTask(idx) {
+  tasks[idx].important = !tasks[idx].important;
+  console.log(tasks[idx]);
+
+  addTask();
+  saveTask();
+  updateUI();
+}
+
 function updateUI() {
   addTask();
   totalTaskall();
