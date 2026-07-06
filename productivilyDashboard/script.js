@@ -268,7 +268,6 @@ const quoteText = document.querySelector("#quoteText");
 const quoteAuthor = document.querySelector("#quoteAuthor");
 const newQuote = document.querySelector("#newQuote");
 
-
 const quoteCard = document.querySelector(".mylifediv");
 
 quoteCard.addEventListener("click", () => {
@@ -422,7 +421,7 @@ const totalTask = document.querySelector(".totalTask");
 let completed = document.querySelector(".comletes");
 const pending = document.querySelector(".pending");
 const goalTextarea = document.querySelector("#todotextarea");
-let totalmark=document.querySelector('.totalmark')
+let totalmark = document.querySelector(".totalmark");
 
 let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
 
@@ -443,12 +442,12 @@ function addTask() {
             </div>
             <div class="task-btn buttntop">
                 <div class="twobtn">
-                <button  class="clickbtnli"  id="allbtnclick1" onclick="completeTask(${idx})" >Complete</button>
+                <button  class="clickbtnli"  id="allbtnclick1" onclick="completeTask(${idx})" > ${elem.completed ? "Undo" : "Complete"}</button>
                 <button class="clickbtnli" id="allbtnclick2" onclick="editTask(${idx})">Edit</button>
                 </div>
                <div class="twobtn">
                 <button class="clickbtnli" id="allbtnclick3" onclick="deleteTask(${idx})"> Delete</button>
-               <button class="clickbtnli" id="allbtnclick4" onclick="markTask(${idx})">${elem.important ? "Unmark" :"Mark"}</button>
+               <button class="clickbtnli" id="allbtnclick4" onclick="markTask(${idx})">${elem.important ? "Unmark" : "Mark"}</button>
                </div>
             </div>
         </div>
@@ -469,7 +468,7 @@ todoForm.addEventListener("submit", (e) => {
     textareaValue,
     id,
     completed: false,
-      important: false,
+    important: false,
   });
   console.log(textareaValue);
   addTask();
@@ -540,11 +539,11 @@ function markTask(idx) {
   updateUI();
 }
 
-function totalMark(){
-  totalmark.textContent=tasks.length-tasks.filter((mark)=>!mark.important).length
+function totalMark() {
+  totalmark.textContent =
+    tasks.length - tasks.filter((mark) => !mark.important).length;
   addTask();
   saveTask();
-
 }
 
 function updateUI() {
@@ -552,7 +551,7 @@ function updateUI() {
   totalTaskall();
   completedTaskAll();
   pendingTaskAll();
-  totalMark()
+  totalMark();
   saveTask();
 }
 
@@ -675,55 +674,33 @@ function updateGoalsUI() {
 
 updateGoalsUI();
 
-
-
-
 const themeToggle = document.querySelector("#themeToggle");
 
-
 function loadTheme() {
+  const savedTheme = localStorage.getItem("theme");
+  if (savedTheme === "dark") {
+    document.body.classList.add("dark");
+    themeToggle.innerHTML = "🌙";
+  } else {
+    document.body.classList.remove("dark");
 
-    const savedTheme = localStorage.getItem("theme");
-    if (savedTheme === "dark") {
-        document.body.classList.add("dark");
-        themeToggle.innerHTML = "🌙";
-
-    } else {
-
-        document.body.classList.remove("dark");
-
-        themeToggle.innerHTML = "☀️";
-
-    }
-
+    themeToggle.innerHTML = "☀️";
+  }
 }
 
-// Toggle Theme
 function toggleTheme() {
-
-    document.body.classList.toggle("dark");
-
-    if (document.body.classList.contains("dark")) {
-
-        localStorage.setItem("theme", "dark");
-
-        themeToggle.innerHTML = "🌙 ";
-
-    } else {
-
-        localStorage.setItem("theme", "light");
-
-        themeToggle.innerHTML = "☀️";
-
-    }
-
+  document.body.classList.toggle("dark");
+  if (document.body.classList.contains("dark")) {
+    localStorage.setItem("theme", "dark");
+    themeToggle.innerHTML = "🌙 ";
+  } else {
+    localStorage.setItem("theme", "light");
+    themeToggle.innerHTML = "☀️";
+  }
 }
-
 
 themeToggle.addEventListener("click", toggleTheme);
 
-
 loadTheme();
-
 
 document.body.style.transition = ".3s";
