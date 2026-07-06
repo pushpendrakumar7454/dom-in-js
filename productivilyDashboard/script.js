@@ -107,7 +107,7 @@ const humidity = document.querySelector("#humidity");
 const wind = document.querySelector("#wind");
 
 async function getWeather() {
-  const city = "atrauli";
+  const city = "bhopal";
   const apiKey = "f08f5635af50e7bb140f0987a044ebef";
 
   const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
@@ -137,7 +137,7 @@ async function getWeather() {
         break;
 
       case "Clouds":
-        weatherIcon.setAttribute("src", "./fonts/cloud.png");
+        weatherIcon.setAttribute("src", "./fonts/sun.png");
         break;
 
       case "Rain":
