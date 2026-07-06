@@ -1,0 +1,369 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>ProductibilyDashboard</title>
+  </head>
+  <body>
+    <main>
+      <section>
+        <nav class="navbar">
+          <div class="nav-logo">
+            <h2>Productivity</h2>
+          </div>
+
+          <ul class="nav-links">
+            <li><a href="#">Dashboard</a></li>
+            <li><a href="#">Tasks</a></li>
+            <li><a href="#">Calendar</a></li>
+            <li><a href="#">Analytics</a></li>
+          </ul>
+
+          <div class="nav-right">
+            <button class="theme-btn"  id="themeToggle">🌙</button>
+
+            <div class="profile">
+              <img src="https://i.pravatar.cc/100?img=12" alt="" />
+              <span>Pushpendra</span>
+            </div>
+          </div>
+        </nav>
+        <div class="img_div">
+          <img src="./fonts/morning2.png" alt="" id="bgImage" />
+        </div>
+        <div class="hero-card">
+          <div class="left">
+            <p class="greet" id="greeting">🌅 Good Morning</p>
+            <h1 id="dayName">Saturday</h1>
+            <p class="date" id="date">05 July 2026</p>
+            <h2 id="time">10:26:02 <span id="ampm">AM</span></h2>
+            <p class="location" id="cityname">📍 Bikaner, Rajasthan</p>
+          </div>
+
+          <div class="divider"></div>
+
+          <div class="right">
+            <div class="weather-icon">
+              <img src="./fonts/sun.png" alt="" id="weatherIcon" />
+            </div>
+
+            <h3 id="temp">29°C</h3>
+
+            <p id="weatherText">Sunny Day</p>
+
+            <div class="weather-info">
+              <span id="humidity">💧 67%</span>
+              <span id="wind">🌬 14 km/h</span>
+            </div>
+          </div>
+        </div>
+        <div class="bottom_tasks">
+          <div class="alltasks">
+            <div class="todolistdiv">
+              <img src="./fonts/totdo.png" alt="todo" id="todoImage" />
+              <video id="todoVideo" muted loop style="display: none">
+                <source src="./fonts/todo.mp4" type="video/mp4" />
+              </video>
+            </div>
+            <div class="plandaydiv">
+              <img src="./fonts/paln.png" alt="" id="planimg" />
+              <video id="planVideo" muted loop style="display: none">
+                <source src="./fonts/b.mp4" type="video/mp4" />
+              </video>
+            </div>
+            <div class="mylifediv">
+              <img src="./fonts/yourwork.png" alt="" id="lifeimg" />
+              <video id="lifevideo" muted loop style="display: none">
+                <source src="./fonts/daily-plan.mp4" type="video/mp4" />
+              </video>
+            </div>
+            <div class="timesessiondiv">
+              <img src="./fonts/work.png" alt="" id="sessionimg" />
+              <video id="sessionvdo" muted loop style="display: none">
+                <source src="./fonts/pomo.mp4" type="video/mp4" />
+              </video>
+            </div>
+            <div class="goalsdiv">
+              <img src="./fonts/goals.png" alt="" id="goalsimg" />
+              <video id="goalsvvdo" muted loop style="display: none">
+                <source src="./fonts/daily-plan.mp4" type="video/mp4" />
+              </video>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div id="overlay1">
+        <div class="rightdiv">
+          <div class="maain">
+            <div class="navbar3">
+              <h2 class="toooo">ToDoList</h2>
+            </div>
+          </div>
+          <div class="controldiv">
+            <div class="tasksall">
+              <div class="totaltask">
+                <h3 class="totalTask">0</h3>
+                <h6>Total Tasks</h6>
+              </div>
+              <div class="totaltask">
+                <h3 class="comletes">0</h3>
+                <h6>Completed</h6>
+              </div>
+              <div class="totaltask">
+                <h3 class="pending">0</h3>
+                <h6>Pending</h6>
+              </div>
+            </div>
+          </div>
+          <div class="all">
+            <div class="taskadd">
+              <form id="todoForm">
+                <input
+                  type="text"
+                  placeholder="What need to be done today?"
+                  id="todoinput"
+                />
+                <textarea
+                  placeholder="add dettail todo..."
+                  id="todotextarea"
+                ></textarea>
+                <button>Add Task</button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="leftdiv">
+          <div class="maain">
+            <div class="navbar3">
+              <button class="homebtn">Home</button>
+              <h2>All Todo</h2>
+            </div>
+          </div>
+          <div class="bottommain">
+            <div class="parenttask"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="overlay4">
+        <div class="navav">
+          <div class="titlediv">
+            <h2 class="title">Study with me!</h2>
+          </div>
+          <div class="navbar3">
+            <button class="homebtn hhhhh backhome" id="homebtn1">Home</button>
+            <h2>session</h2>
+          </div>
+        </div>
+
+        <div class="timer-box">
+          <button class="session-btn">Work Session</button>
+
+          <h1 class="timer" id="timer">25:00</h1>
+
+          <div class="buttons">
+            <button id="startBtn">Start</button>
+            <button id="pauseBtn">Pause</button>
+            <button id="resetBtn">Reset</button>
+          </div>
+        </div>
+      </div>
+
+      <div id="overlaygoals5">
+        <div class="rightdiv darkgoal" id="rightdiv2">
+          <div class="maain">
+            <div class="navbar3">
+              <h2 class="toooo">Add Yoal Goals</h2>
+            </div>
+          </div>
+          <div class="controldiv">
+            <div class="tasksall">
+              <div class="totaltask" id="tottal">
+                <h3 class="totalgoals">0</h3>
+                <h6>Total Goals</h6>
+              </div>
+              <div class="totaltask" id="tottal">
+                <h3 class="comletesgoals">0</h3>
+                <h6>Completed</h6>
+              </div>
+              <div class="totaltask" id="tottal">
+                <h3 class="pendinggoal">0</h3>
+                <h6>Pending</h6>
+              </div>
+            </div>
+          </div>
+          <div class="all">
+            <div class="taskadd" id="backall">
+              <form id="goalsForm">
+                <input
+                  type="text"
+                  placeholder="Enter your goals"
+                  id="goalsinput"
+                />
+                <textarea
+                  placeholder="Enter goals detail.....?"
+                  id="goalstextareaaa"
+                ></textarea>
+                <button id="goalbtn">Add Goal</button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="leftdiv" id="manleft">
+          <div class="maain">
+            <div class="navbar3">
+              <button class="homebtn backhomebtn5">Home</button>
+              <h2>All Goals</h2>
+            </div>
+          </div>
+          <div class="bottommain">
+            <div class="parenttask" id="prentgoals"></div>
+          </div>
+        </div>
+      </div>
+
+
+      <div id="plannerOverlay">
+        <div class="planner-header">
+          <h2>Daily Planner</h2>
+          <button id="plannerHome">Home</button>
+        </div>
+
+        <div class="planner-container">
+          <div class="planner-row">
+            <span>09:00 AM</span>
+            <input
+              type="text"
+              class="plannerInput"
+              data-hour="9"
+              placeholder="Write your plan..."
+            />
+            <button class="savePlanner">Save</button>
+          </div>
+
+          <div class="planner-row">
+            <span>10:00 AM</span>
+            <input
+              type="text"
+              class="plannerInput"
+              data-hour="10"
+              placeholder="Write your plan..."
+            />
+            <button class="savePlanner">Save</button>
+          </div>
+
+          <div class="planner-row">
+            <span>11:00 AM</span>
+            <input
+              type="text"
+              class="plannerInput"
+              data-hour="11"
+              placeholder="Write your plan..."
+            />
+            <button class="savePlanner">Save</button>
+          </div>
+
+          <div class="planner-row">
+            <span>12:00 PM</span>
+            <input
+              type="text"
+              class="plannerInput"
+              data-hour="12"
+              placeholder="Write your plan..."
+            />
+            <button class="savePlanner">Save</button>
+          </div>
+
+          <div class="planner-row">
+            <span>01:00 PM</span>
+            <input
+              type="text"
+              class="plannerInput"
+              data-hour="13"
+              placeholder="Write your plan..."
+            />
+            <button class="savePlanner">Save</button>
+          </div>
+
+          <div class="planner-row">
+            <span>02:00 PM</span>
+            <input
+              type="text"
+              class="plannerInput"
+              data-hour="14"
+              placeholder="Write your plan..."
+            />
+            <button class="savePlanner">Save</button>
+          </div>
+
+          <div class="planner-row">
+            <span>03:00 PM</span>
+            <input
+              type="text"
+              class="plannerInput"
+              data-hour="15"
+              placeholder="Write your plan..."
+            />
+            <button class="savePlanner">Save</button>
+          </div>
+
+          <div class="planner-row">
+            <span>04:00 PM</span>
+            <input
+              type="text"
+              class="plannerInput"
+              data-hour="16"
+              placeholder="Write your plan..."
+            />
+            <button class="savePlanner">Save</button>
+          </div>
+
+          <div class="planner-row">
+            <span>05:00 PM</span>
+            <input
+              type="text"
+              class="plannerInput"
+              data-hour="17"
+              placeholder="Write your plan..."
+            />
+            <button class="savePlanner">Save</button>
+          </div>
+
+          <div class="planner-row">
+            <span>06:00 PM</span>
+            <input
+              type="text"
+              class="plannerInput"
+              data-hour="18"
+              placeholder="Write your plan..."
+            />
+            <button class="savePlanner">Save</button>
+          </div>
+        </div>
+      </div>
+
+      <div id="quoteOverlay">
+        <div class="quote-nav">
+          <h2>Motivation Quotes</h2>
+
+          <button id="quoteHome">Home</button>
+        </div>
+
+        <div class="quote-box">
+          <h3 id="quoteText">Click below to get a motivational quote.</h3>
+
+          <p id="quoteAuthor"></p>
+
+          <button id="newQuote">New Quote</button>
+        </div>
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

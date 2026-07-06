@@ -50,8 +50,6 @@ form.addEventListener('submit',(e)=>{
     allCompletedTask()
 
     form.reset()
-    
-
 })
 
 

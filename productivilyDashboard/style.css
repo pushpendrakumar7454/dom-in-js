@@ -1,0 +1,1106 @@
+@font-face {
+  font-family: for;
+  src: url(./fonts/GoogleSans-VariableFont_GRAD\,opsz\,wght.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: for, sans-serif;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+main {
+  width: 100%;
+  height: 100%;
+}
+
+section {
+  width: 100%;
+  height: 100%;
+  background-color: aqua;
+  overflow: hidden;
+}
+
+.img_div {
+  width: 100%;
+  height: 100%;
+}
+
+.img_div img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.navbar {
+  position: fixed;
+  top: 18px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 94%;
+  height: 75px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 35px;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  z-index: 1000;
+}
+
+.nav-logo h2 {
+  color: #fff;
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 35px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 17px;
+  position: relative;
+  transition: 0.35s;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0%;
+  height: 2px;
+  background: #00e5ff;
+  transition: 0.35s;
+}
+
+.nav-links a:hover {
+  color: #00e5ff;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.theme-btn {
+  width: 48px;
+  height: 48px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.12);
+  color: white;
+  font-size: 20px;
+  transition: 0.4s;
+}
+
+.theme-btn:hover {
+  transform: rotate(180deg);
+  background: white;
+  color: black;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 7px 15px;
+  border-radius: 50px;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.profile img {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid white;
+}
+
+.profile span {
+  color: white;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.hero-card {
+  position: absolute;
+  top: 120px;
+  left: 40px;
+  width: 470px;
+  height: 300px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 45px;
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, 0.35),
+    inset 0 1px 1px rgba(255, 255, 255, 0.25);
+
+  color: white;
+}
+
+.hero-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 28px;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.18),
+    transparent 45%,
+    rgba(255, 255, 255, 0.05)
+  );
+  pointer-events: none;
+}
+
+.left {
+  width: 60%;
+}
+
+.greet {
+  font-size: 18px;
+  opacity: 0.9;
+}
+
+.left h1 {
+  font-size: 37px;
+  margin: 14px 0 5px;
+  font-weight: 500;
+  line-height: 1rem;
+}
+
+.date {
+  font-size: 16px;
+  opacity: 0.8;
+  margin-top: 9px;
+}
+
+.left h2 {
+  margin-top: 45px;
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 1rem;
+}
+
+.left h2 span {
+  font-size: 26px;
+}
+
+.location {
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+.divider {
+  width: 1px;
+  height: 220px;
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.right {
+  width: 32%;
+  text-align: center;
+}
+
+.weather-icon {
+  font-size: 40px;
+}
+#weatherIcon {
+  width: 60px;
+  height: 60px;
+}
+
+.right h3 {
+  font-size: 40px;
+  position: relative;
+  bottom: 30px;
+}
+
+.right > p {
+  font-size: 22px;
+  margin-bottom: 2px;
+  position: relative;
+  bottom: 30px;
+  line-height: 0.3rem;
+}
+
+.weather-info {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  font-size: 18px;
+  opacity: 0.9;
+  margin-bottom: 4px;
+  position: relative;
+  bottom: 10px;
+}
+
+.bottom_tasks {
+  width: 140px;
+  height: 440px;
+  background: rgba(255, 255, 255, 0.25);
+  position: absolute;
+  bottom: 20px;
+  right: 50px;
+  border-radius: 10px;
+}
+.alltasks {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 13px;
+  gap: 10px;
+}
+.todolistdiv {
+  width: 74px;
+  height: 74px;
+  border-radius: 50%;
+  background-color: red;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all ease 1s;
+}
+.todolistdiv:active {
+  transform: scale(2.3);
+}
+
+.todolistdiv img {
+  width: 100%;
+  height: 100%;
+}
+
+.todolistdiv video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.plandaydiv {
+  width: 74px;
+  height: 74px;
+  border-radius: 50%;
+  background-color: red;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all ease 1s;
+}
+
+.plandaydiv:active {
+  transform: scale(2.3);
+}
+
+.plandaydiv img {
+  width: 100%;
+  height: 100%;
+}
+.plandaydiv video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.mylifediv {
+  width: 74px;
+  height: 74px;
+  border-radius: 50%;
+  background-color: red;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all ease 1s;
+}
+
+.mylifediv:active {
+  transform: scale(2.3);
+}
+.mylifediv img {
+  width: 100%;
+  height: 100%;
+}
+
+.mylifediv video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.timesessiondiv {
+  width: 74px;
+  height: 74px;
+  border-radius: 50%;
+  background-color: red;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all ease 1s;
+}
+
+.timesessiondiv:active {
+  transform: scale(2.3);
+}
+.timesessiondiv img {
+  width: 100%;
+  height: 100%;
+}
+
+.timesessiondiv video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.goalsdiv {
+  width: 74px;
+  height: 74px;
+  border-radius: 50%;
+  background-color: red;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all ease 1s;
+}
+
+.goalsdiv:active {
+  transform: scale(2.3);
+}
+
+.goalsdiv img {
+  width: 100%;
+  height: 100%;
+}
+
+.goalsdiv video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#overlay1 {
+  width: 100%;
+  background-color: white;
+  display: flex;
+  display: none;
+}
+
+.rightdiv {
+  width: 40%;
+  height: 100%;
+  background: white;
+  padding: 40px;
+}
+
+.controldiv {
+  display: flex;
+}
+.tasksall {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.totaltask {
+  width: 125px;
+  background: black;
+  border: 1px solid white;
+  padding: 0.6rem 0.6rem;
+  border-radius: 1rem;
+  cursor: pointer;
+  text-align: center;
+}
+.totaltask h3 {
+  color: white;
+  text-align: center;
+  font-family: for;
+  font-size: 32px;
+  line-height: 2.5rem;
+  font-weight: 500;
+}
+
+.totaltask h6 {
+  color: white;
+  font-size: 20px;
+  line-height: 2.2rem;
+  font-weight: 100;
+}
+.leftdiv {
+  width: 60%;
+  background-color: rgba(48, 42, 42, 0.411);
+}
+.maain {
+  padding: 30px;
+}
+
+.navbar3 {
+  width: 100%;
+  height: 70px;
+  background: #1e1e2f;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 35px;
+  color: #fff;
+  border-radius: 12px;
+}
+
+.homebtn {
+  width: 130px;
+  padding: 0rem 0.3rem;
+  border: none;
+  background-color: #5c572b;
+  color: white;
+  font-size: 22px;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  transition: all ease 1s;
+}
+.homebtn:active {
+  transform: scale(2.3);
+}
+
+.nav-center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.theme-btn {
+  width: 50px;
+  height: 50px;
+  border: none;
+  border-radius: 50%;
+  background: #2d2d44;
+  color: #fff;
+  font-size: 22px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.theme-btn:hover {
+  background: #4b6cff;
+  transform: rotate(20deg) scale(1.1);
+}
+.all {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 70px;
+}
+.taskadd {
+  width: 94%;
+  background: black;
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1rem;
+  padding: 1.4rem;
+  display: flex;
+}
+form {
+  width: 100%;
+  min-height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+.taskadd input {
+  width: 100%;
+  font-size: 1.2rem;
+  padding: 0.6rem 1rem;
+  border-radius: 0.6rem;
+  outline: none;
+  border: none;
+  background-color: black;
+  color: white;
+}
+
+.taskadd textarea {
+  width: 100%;
+  font-size: 1.2rem;
+  padding: 0.6rem 1rem;
+  border-radius: 0.6rem;
+  outline: none;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.08);
+  color: white;
+}
+
+.taskadd button {
+  width: 100%;
+  font-size: 1.2rem;
+  border-radius: 0.6rem;
+  border: none;
+  background: linear-gradient(to right, #2f4677, #9333ea);
+  color: white;
+  cursor: pointer;
+  transition: all ease 1s;
+}
+.taskadd button:active {
+  transform: scale(3.3);
+}
+.taskadd button:hover {
+  box-shadow: 0px 5px 10px 0px #2563eb;
+}
+
+.bottommain {
+  width: 100%;
+  height: 46rem;
+  padding: 2.4rem;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 1.2rem;
+}
+
+.taskcom {
+  width: 40%;
+  min-height: 12rem;
+  border-radius: 1rem;
+  flex-shrink: 0;
+  background: white;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: 0.3s;
+  padding: 1rem 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  gap: 0.9rem;
+}
+
+.taskcom:hover {
+  transform: translateY(-8px);
+}
+
+.parenttask {
+  display: flex;
+  gap: 3.4rem;
+  flex-wrap: wrap;
+}
+.task {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.task h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background-color: blue;
+  padding: 1.4rem;
+  font-size: 1.4em;
+  font-weight: 400;
+}
+.task h3 {
+  font-size: 1.2rem;
+  font-weight: 300;
+  color: #94a3b8;
+  line-height: 1rem;
+}
+.task-btn {
+  display: flex;
+  justify-content: space-between;
+}
+.task-btn button {
+  width: fit-content;
+  background-color: rgba(207, 24, 24, 0.863);
+  padding: 0rem 0.7rem;
+  border: none;
+  border-radius: 0.4rem;
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all ease 1s;
+}
+button:nth-child(2) {
+  background-color: rgb(18, 201, 18);
+}
+button:nth-child(1) {
+  background-color: rgb(0, 102, 128);
+}
+.clickbtnli:active {
+  transform: scale(3.3);
+}
+
+.completed {
+  text-decoration: line-through;
+}
+
+#overlaygoals5 {
+  width: 100%;
+  background-color: #0f172a;
+  display: flex;
+  display: none;
+}
+
+.toooo {
+  text-align: center;
+  position: relative;
+  left: 100px;
+}
+#overlaygoals5 {
+  background-color: white;
+}
+#rightdiv2 {
+  background-color: #cde1e4;
+}
+
+#tottal {
+  background-color: white;
+}
+#tottal h3 {
+  color: black;
+}
+#tottal h6 {
+  color: black;
+}
+#goalsinput {
+  background-color: white;
+  color: black;
+}
+#backall {
+  background-color: black;
+  border-radius: 10px;
+}
+#goalstextarea {
+  background-color: white;
+  color: black;
+}
+#goalbtn {
+  background-color: white;
+}
+#manleft {
+  background-color: rgba(131, 128, 128, 0.438);
+}
+
+#taskcard {
+  background-color: rgb(39, 37, 37);
+}
+
+.overlay4 {
+  width: 100%;
+  height: 100vh;
+  background: #f5f5f5;
+  position: relative;
+  display: none;
+  overflow: hidden;
+}
+
+.title {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 28px;
+  font-weight: 700;
+  color: white;
+  padding-left: 20px;
+  text-align: center;
+}
+
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 8px;
+  background: #9f9f9f;
+  color: #fff;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.timer-box {
+  width: 100%;
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.session-btn {
+  padding: 0.3rem 1rem;
+  border: none;
+  border-radius: 8px;
+  background: #d8d8d8;
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 90px;
+  cursor: pointer;
+  color: white;
+}
+
+.timer {
+  font-size: 70px;
+  font-weight: 800;
+  line-height: 1;
+  margin-bottom: 35px;
+}
+
+.buttons {
+  display: flex;
+  gap: 18px;
+}
+
+.buttons button {
+  padding: 4px 30px;
+  border: none;
+  border-radius: 8px;
+  background: #9e9e9e;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.buttons button:hover {
+  background: #666;
+  transform: translateY(-2px);
+}
+.navav {
+  padding: 20px;
+  width: 100%;
+  display: flex;
+}
+.hhhhh {
+  position: relative;
+  left: 1000px;
+}
+
+#plannerOverlay {
+  inset: 0;
+  background: #f5f7fb;
+  display: none;
+  flex-direction: column;
+  z-index: 999;
+  display: none;
+}
+
+.planner-header {
+  width: 100%;
+  height: 70px;
+  padding: 0 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.planner-header h2 {
+  font-size: 28px;
+}
+
+#plannerHome {
+  padding: 10px 24px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  background: #111827;
+  color: white;
+  font-size: 16px;
+}
+
+.planner-container {
+  width: 80%;
+  margin: 40px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.planner-row {
+  display: grid;
+  grid-template-columns: 120px 1fr 120px;
+  align-items: center;
+  gap: 20px;
+  background: white;
+  padding: 15px 20px;
+  border-radius: 14px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.planner-row span {
+  font-weight: 600;
+}
+
+.planner-row input {
+  height: 48px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 0 15px;
+  font-size: 15px;
+  outline: none;
+}
+
+.planner-row input:focus {
+  border-color: #4f46e5;
+}
+
+.savePlanner {
+  height: 48px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  background: #4f46e5;
+  color: white;
+  font-size: 15px;
+}
+
+.current-slot {
+  border: 2px solid #22c55e;
+  background: #ecfdf5;
+}
+
+#quoteOverlay {
+  inset: 0;
+  display: none;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: #f5f5f5;
+  display: none;
+}
+
+.quote-box {
+  width: 700px;
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+#quoteHome{
+    width: 120px;
+    background-color: black;
+    border: none;
+    color: white;
+    font-size: 22px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all ease 1s;
+}
+
+#quoteHome:active{
+    transform: scale(2.3);
+}
+.quote-box h3 {
+  font-size: 28px;
+
+  line-height: 45px;
+}
+
+.quote-box p {
+  margin: 25px 0;
+
+  color: #777;
+}
+
+#newQuote {
+  padding: 14px 35px;
+  border: none;
+  background: #4f46e5;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.quote-nav{
+    display: flex;
+    padding: 30px;
+    gap: 50px;
+}
+
+/*================ DARK MODE ================*/
+
+body.dark{
+    background:#0b1120;
+    color:#fff;
+}
+
+/* Dashboard */
+
+body.dark section{
+    background:#0b1120;
+    color:#fff;
+}
+
+/* Navbar */
+
+body.dark .navbar3{
+    background:#111827;
+    border-bottom:1px solid #2d3748;
+}
+
+body.dark .navbar3 h1,
+body.dark .navbar3 a,
+body.dark .navbar3 i{
+    color:#fff;
+}
+
+/* Dashboard Cards */
+
+body.dark .todolistdiv,
+body.dark .plandaydiv,
+body.dark .mylifediv,
+body.dark .timesessiondiv,
+body.dark .goalsdiv{
+    background:#1e293b;
+    color:white;
+    box-shadow:0 10px 30px rgba(0,0,0,.45);
+}
+
+/* All Overlays */
+
+body.dark #overlay1,
+body.dark #plannerOverlay,
+body.dark #quoteOverlay,
+body.dark #overlaygoals5,
+body.dark .overlay4{
+    background:#0f172a;
+    color:white;
+}
+
+
+body.dark .taskcom{
+    background:#1e293b;
+    color:white;
+    border:1px solid #334155;
+}
+
+
+
+body.dark .planner-row{
+    background:#1e293b;
+    color:white;
+}
+
+
+body.dark .quote-box{
+    background:#1e293b;
+    color:white;
+}
+
+
+body.dark input,
+body.dark textarea{
+    background:#0f172a;
+    color:white;
+    border:1px solid #475569;
+}
+
+body.dark input::placeholder,
+body.dark textarea::placeholder{
+    color:#94a3b8;
+}
+
+/* Buttons */
+
+body.dark button{
+    background:#2563eb;
+    color:white;
+
+}
+
+body.dark button:hover{
+    background:#1d4ed8;
+}
+
+
+body.dark .homebtn,
+body.dark .backhome,
+body.dark .backhomebtn5,
+body.dark #plannerHome,
+body.dark #quoteHome{
+    background:#2563eb;
+    
+}
+
+
+
+body.dark .totalTask,
+body.dark .pending,
+body.dark .comletes,
+body.dark .totalgoals,
+body.dark .pendinggoal,
+body.dark .comletesgoals{
+    color:#38bdf8;
+}
+
+
+
+body.dark .current-slot{
+    background:#064e3b;
+    border:2px solid #10b981;
+}
+
+
+
+body.dark ::-webkit-scrollbar{
+    width:8px;
+}
+
+body.dark ::-webkit-scrollbar-thumb{
+    background:#334155;
+    border-radius:10px;
+}
+
+/* Goals Right Side Dark */
+
+body.dark .rightdiv{
+    background:#111827;
+}
+
+/* Goals Buttons */
+
+body.dark .rightdiv button,
+body.dark #overlaygoals5 button{
+    color:#000;
+    background-color: white;
+}
+
+
+
+body.dark .rightdiv button{
+    background:#fff;
+}
+
+body.dark #rightdiv2{
+    background-color: #00000062;
+}
