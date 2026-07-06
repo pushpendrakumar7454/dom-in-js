@@ -105,6 +105,9 @@ section {
   gap: 18px;
 }
 
+#github{
+  background-color: white;
+}
 .theme-btn {
   width: 48px;
   height: 48px;
@@ -621,6 +624,11 @@ form {
 .important{
     color: red;
     font-weight: bold;
+}
+#markdowndiv{
+  position: relative;
+  left: 100px;
+  width: 220px;
 }
 .task h2 {
   display: flex;
@@ -1148,3 +1156,9 @@ body.dark #rightdiv2{
     background-color: #00000062;
 }
 
+body.dark .navbar{
+  background-color: rgb(4, 4, 54);
+}
+body.dark .planner-header{
+  background-color: rgb(8, 8, 49);
+}

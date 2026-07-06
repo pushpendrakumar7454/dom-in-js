@@ -422,6 +422,7 @@ const totalTask = document.querySelector(".totalTask");
 let completed = document.querySelector(".comletes");
 const pending = document.querySelector(".pending");
 const goalTextarea = document.querySelector("#todotextarea");
+let totalmark=document.querySelector('.totalmark')
 
 let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
 
@@ -539,11 +540,19 @@ function markTask(idx) {
   updateUI();
 }
 
+function totalMark(){
+  totalmark.textContent=tasks.length-tasks.filter((mark)=>!mark.important).length
+  addTask();
+  saveTask();
+
+}
+
 function updateUI() {
   addTask();
   totalTaskall();
   completedTaskAll();
   pendingTaskAll();
+  totalMark()
   saveTask();
 }
 
@@ -668,11 +677,10 @@ updateGoalsUI();
 
 
 
-//====================== DARK MODE ======================
 
 const themeToggle = document.querySelector("#themeToggle");
 
-// Page Load
+
 function loadTheme() {
 
     const savedTheme = localStorage.getItem("theme");
@@ -711,11 +719,11 @@ function toggleTheme() {
 
 }
 
-// Button Click
+
 themeToggle.addEventListener("click", toggleTheme);
 
-// Load Saved Theme
+
 loadTheme();
 
-// Smooth Transition
+
 document.body.style.transition = ".3s";
