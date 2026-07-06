@@ -436,7 +436,7 @@ function addTask() {
             <div class="task">
                 <h2>${elem.id}</h2>
                 <h3 class="${elem.completed ? "completed" : ""} ${elem.important ? "important" : ""}">${elem.value}</h3>
-                <h3 class="${elem.completed ? "completed" : ""} ${elem.important ? "important" : ""}">
+                <h3 class="${elem.completed ? "completed" : ""} ${elem.important ? "important" : ""}" id="textareateext">
                     ${elem.textareaValue}
                 </h3>
             </div>
@@ -494,8 +494,10 @@ function editTask(idx) {
     return;
   }
   let newValue = prompt("Edit task", tasks[idx].value);
+  let newText=prompt("edit detail",tasks[idx].textareaValue)
   if (newValue === null || newValue.trim() === "") return;
   tasks[idx].value = newValue;
+  tasks[idx].textareaValue=newText
   addTask();
   saveTask();
   updateUI();
@@ -585,7 +587,7 @@ function addGoals() {
                 <h3 class="${goal.completedgoal ? "completed" : ""}">
                     ${goal.goalValue}
                 </h3>
-                <h3 class="${goal.completedgoal ? "completed" : ""}">
+                <h3 class="${goal.completedgoal ? "completed" : ""}" id="textareateext">
                     ${goal.goalText}
                 </h3>
             </div>
@@ -639,10 +641,12 @@ function editGoal(idx) {
     return;
   }
   let newGoal = prompt("Edit Goal", goals[idx].goalValue);
+  let newTextArea=prompt("Edit detail",goals[idx]. goalText)
 
   if (newGoal === null || newGoal.trim() === "") return;
 
   goals[idx].goalValue = newGoal;
+  goals[idx]. goalText=newTextArea;
 
   updateGoalsUI();
 }
