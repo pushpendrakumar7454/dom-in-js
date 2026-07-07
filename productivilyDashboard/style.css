@@ -605,6 +605,7 @@ form {
   justify-content: space-between;
   cursor: pointer;
   gap: 0.9rem;
+  position: relative;
 }
 
 #cardTask{
@@ -656,6 +657,30 @@ form {
 .task-btn {
   display: flex;
   justify-content: space-between;
+}
+.importantBox{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: white;
+    margin: 10px 0;
+    font-size: 15px;
+}
+
+.importantBox input{
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+.important-badge{
+    position: absolute;
+    top: 8px;
+    left: 59px;
+    color: red;
+    border-radius: 7px;
+    font-size: 18px;
+    font-weight: bold;
 }
 .task-btn button {
   width: fit-content;

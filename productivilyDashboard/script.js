@@ -163,27 +163,7 @@ async function getWeather() {
 
 getWeather();
 
-const todoImage = document.getElementById("todoImage");
-const todoVideo = document.getElementById("todoVideo");
-const todolistdiv = document.querySelector(".todolistdiv");
 
-todoVideo.addEventListener("click", () => {
-  section.style.display = "none";
-  overlay1.style.display = "flex";
-});
-
-todolistdiv.addEventListener("mouseenter", () => {
-  todoImage.style.display = "none";
-  todoVideo.style.display = "block";
-  todoVideo.play();
-});
-
-todolistdiv.addEventListener("mouseleave", () => {
-  todoVideo.pause();
-  todoVideo.currentTime = 0;
-  todoVideo.style.display = "none";
-  todoImage.style.display = "block";
-});
 
 const plandaydiv = document.querySelector(".plandaydiv");
 const planimg = document.querySelector("#planimg");
@@ -414,6 +394,30 @@ goalsdiv.addEventListener("mouseleave", () => {
   goalsimg.style.display = "block";
 });
 
+
+
+const todoImage = document.getElementById("todoImage");
+const todoVideo = document.getElementById("todoVideo");
+const todolistdiv = document.querySelector(".todolistdiv");
+
+todoVideo.addEventListener("click", () => {
+  section.style.display = "none";
+  overlay1.style.display = "flex";
+});
+
+todolistdiv.addEventListener("mouseenter", () => {
+  todoImage.style.display = "none";
+  todoVideo.style.display = "block";
+  todoVideo.play();
+});
+
+todolistdiv.addEventListener("mouseleave", () => {
+  todoVideo.pause();
+  todoVideo.currentTime = 0;
+  todoVideo.style.display = "none";
+  todoImage.style.display = "block";
+});
+
 const todoForm = document.querySelector("#todoForm");
 const parenttask = document.querySelector(".parenttask");
 const input = document.querySelector("#todoinput");
@@ -422,6 +426,7 @@ let completed = document.querySelector(".comletes");
 const pending = document.querySelector(".pending");
 const goalTextarea = document.querySelector("#todotextarea");
 let totalmark = document.querySelector(".totalmark");
+const importantTask = document.querySelector("#importantTask");
 
 let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
 
@@ -433,6 +438,7 @@ function addTask() {
   parenttask.innerHTML = "";
   tasks.forEach((elem, idx) => {
     parenttask.innerHTML += ` <div class="taskcom" id="cardTask">
+          ${elem.important ? `<div class="important-badge">imp</div>` : ""}
             <div class="task">
                 <h2>${elem.id}</h2>
                 <h3 class="${elem.completed ? "completed" : ""} ${elem.important ? "important" : ""}">${elem.value}</h3>
@@ -460,6 +466,7 @@ todoForm.addEventListener("submit", (e) => {
 
   let value = input.value;
   let textareaValue = goalTextarea.value;
+  let important = importantTask.checked;
 
   let id = Math.floor(Math.random() * 100);
   if (value == null || value.trim() === "") return;
@@ -468,7 +475,7 @@ todoForm.addEventListener("submit", (e) => {
     textareaValue,
     id,
     completed: false,
-    important: false,
+    important:important,
   });
   console.log(textareaValue);
   addTask();
