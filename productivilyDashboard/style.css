@@ -407,18 +407,7 @@ section {
   object-fit: cover;
 }
 
-#overlay1 {
-  width: 100%;
-  background-color: white;
-  display: flex;
-  display: none;
-}
 
-.rightdiv {
-  width: 40%;
-  background: white;
-  padding: 40px;
-}
 
 .controldiv {
   display: flex;
