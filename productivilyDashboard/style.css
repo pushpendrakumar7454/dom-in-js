@@ -1203,3 +1203,7 @@ body.dark .hero-card{
 body.dark .bottom_tasks{
   background-color: rgb(8, 8, 49);
 }
+
+body.dark .leftdiv{
+ background-color: rgb(8, 8, 49);
+}
